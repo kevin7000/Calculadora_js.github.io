@@ -1,0 +1,96 @@
+/* Esta es la parte de estilos de css*/
+
+/* Esta parte le damos un poco de estilos a las letras*/
+*{
+    font-family: "Fraunces", serif;
+    color: #fff;
+}
+
+/* Esta le damos un poco de color al background*/
+body {
+    
+    margin: 0;
+    color: burlywood;
+}
+
+/* aqui acomodamos donde se colocara nuestra calculadora*/
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(paisaje.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+/* aqui le damos la forma nuestro marco de la calculadora y su respectivo color*/
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #ffff99;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033; 
+}
+
+/* Colocamos nuestros botones de manera correcta y le damos su respectivos estilos*/
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0px;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #ff9933;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+    
+}
+/* En las proximas dos lineas de daremos los estilos a los botnes cuando el raton pase por encima de cada uno de ellos*/
+button:active{
+    background-color: #ffff99;
+}
+
+button:focus{
+    outline: none;
+}
+
+/* Aqui es donde se mostraran nuestros valores digitados en la pantalla con sus diferentes estilos*/
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+
+}
+
+/* aqui acomodamos el tamaños del cero y el borrar todo*/
+.col-2{
+    grid-column: span 2;
+}
+
+/* aqui le damos el tamaño a nuestros numeros digitados en el display*/
+#valor-anterior{
+    font-size: 1.5em;
+}
+
+#valor-actual{
+    font-size: 2em;
+}
+
+
+
+
+
+
+
